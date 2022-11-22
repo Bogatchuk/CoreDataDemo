@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		88247CCB292CCF4900AA05B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88247CCA292CCF4900AA05B0 /* Assets.xcassets */; };
 		88247CCE292CCF4900AA05B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88247CCC292CCF4900AA05B0 /* LaunchScreen.storyboard */; };
 		88247CD6292CCFA300AA05B0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88247CD5292CCFA300AA05B0 /* TableViewController.swift */; };
+		88247CDA292D350E00AA05B0 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88247CD9292D350E00AA05B0 /* data.plist */; };
+		88247CDC292D39B100AA05B0 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88247CDB292D39B100AA05B0 /* CarViewController.swift */; };
+		88347CBB292D58F200A7DE63 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88247CDE292D4D3600AA05B0 /* Car+CoreDataProperties.swift */; };
+		88347CBC292D58F200A7DE63 /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88247CDD292D4D3600AA05B0 /* Car+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		88247CCD292CCF4900AA05B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88247CCF292CCF4900AA05B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88247CD5292CCFA300AA05B0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		88247CD9292D350E00AA05B0 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		88247CDB292D39B100AA05B0 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		88247CDD292D4D3600AA05B0 /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88247CDE292D4D3600AA05B0 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,15 @@
 				88247CBE292CCF4700AA05B0 /* AppDelegate.swift */,
 				88247CC0292CCF4700AA05B0 /* SceneDelegate.swift */,
 				88247CD5292CCFA300AA05B0 /* TableViewController.swift */,
+				88247CDB292D39B100AA05B0 /* CarViewController.swift */,
 				88247CC4292CCF4700AA05B0 /* Main.storyboard */,
 				88247CCA292CCF4900AA05B0 /* Assets.xcassets */,
 				88247CCC292CCF4900AA05B0 /* LaunchScreen.storyboard */,
 				88247CCF292CCF4900AA05B0 /* Info.plist */,
+				88247CD9292D350E00AA05B0 /* data.plist */,
 				88247CC7292CCF4700AA05B0 /* CoreDataDemo.xcdatamodeld */,
+				88247CDD292D4D3600AA05B0 /* Car+CoreDataClass.swift */,
+				88247CDE292D4D3600AA05B0 /* Car+CoreDataProperties.swift */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -106,7 +118,7 @@
 				};
 			};
 			buildConfigurationList = 88247CB6292CCF4700AA05B0 /* Build configuration list for PBXProject "CoreDataDemo" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -130,6 +142,7 @@
 			files = (
 				88247CCE292CCF4900AA05B0 /* LaunchScreen.storyboard in Resources */,
 				88247CCB292CCF4900AA05B0 /* Assets.xcassets in Resources */,
+				88247CDA292D350E00AA05B0 /* data.plist in Resources */,
 				88247CC6292CCF4700AA05B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88247CDC292D39B100AA05B0 /* CarViewController.swift in Sources */,
 				88247CC9292CCF4700AA05B0 /* CoreDataDemo.xcdatamodeld in Sources */,
 				88247CBF292CCF4700AA05B0 /* AppDelegate.swift in Sources */,
+				88347CBC292D58F200A7DE63 /* Car+CoreDataClass.swift in Sources */,
 				88247CC1292CCF4700AA05B0 /* SceneDelegate.swift in Sources */,
+				88347CBB292D58F200A7DE63 /* Car+CoreDataProperties.swift in Sources */,
 				88247CD6292CCFA300AA05B0 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

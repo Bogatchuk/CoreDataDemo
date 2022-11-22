@@ -6,14 +6,29 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
 
-    var toDoTask: [String] = []
+    var toDoItems: [Task] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = Task.fetchRequest()
+        
+        do {
+            toDoItems = try context.fetch(fetchRequest)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     // MARK: - Table view data source
@@ -22,7 +37,7 @@ class TableViewController: UITableViewController {
         let alert = UIAlertController(title: "Create task", message: "Add new task", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default){_ in
             let textField = alert.textFields?.first
-            self.toDoTask.insert((textField?.text)!, at: 0)
+            self.saveTask(taskToDo: (textField?.text)! )
             self.tableView.reloadData()
         }
         
@@ -41,20 +56,40 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return toDoTask.count
+        return toDoItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
+        let task = toDoItems[indexPath.row]
         var configure = cell.defaultContentConfiguration()
-        configure.text = toDoTask[indexPath.row]
+        configure.text = task.taskToDo
         cell.contentConfiguration = configure
 
         return cell
     }
     
+    func saveTask(taskToDo: String){
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Task", in: context)
+        let taskObject = NSManagedObject(entity: entity!, insertInto: context) as! Task
+        taskObject.taskToDo = taskToDo
+        
+        do {
+          try context.save()
+          toDoItems.append(taskObject)
+          print("Saved! Good Job!")
+        } catch {
+          print(error.localizedDescription)
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

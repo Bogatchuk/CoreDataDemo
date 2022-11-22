@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l83-jn-yQr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sdz-hr-nnf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,8 +63,132 @@
             </objects>
             <point key="canvasLocation" x="17.557251908396946" y="-10.563380281690142"/>
         </scene>
+        <!--Car View Controller-->
+        <scene sceneID="tXT-fJ-fFa">
+            <objects>
+                <viewController id="Sdz-hr-nnf" customClass="CarViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8tk-Ih-bHs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="8XZ-6C-zMM">
+                                <rect key="frame" x="16" y="145.33333333333331" width="361" height="586.33333333333348"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xkw-aA-eAv">
+                                        <rect key="frame" x="161.66666666666666" y="0.0" width="37.666666666666657" height="21.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iih-vb-ARi">
+                                        <rect key="frame" x="148.66666666666666" y="47.666666666666657" width="64" height="29"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamborginiMurcielago" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-IL-raI">
+                                        <rect key="frame" x="75.666666666666686" y="102.66666666666666" width="210" height="101"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-G4-gDT">
+                                        <rect key="frame" x="6" y="229.66666666666666" width="349" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last time started:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSu-mw-M3S">
+                                                <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="18"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: X / 10.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-cM-zZR">
+                                                <rect key="frame" x="178.66666666666663" y="0.0" width="170.33333333333337" height="18"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of trips: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olU-6d-eVq">
+                                        <rect key="frame" x="115.66666666666667" y="273.66666666666663" width="129.66666666666663" height="21.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-qW-cAr">
+                                        <rect key="frame" x="0.0" y="321.33333333333337" width="361" height="32"/>
+                                        <segments>
+                                            <segment title="Lamborgini"/>
+                                            <segment title="Ferrari"/>
+                                            <segment title="Mercedes"/>
+                                            <segment title="Nissan"/>
+                                            <segment title="BMW"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.36367719710000002" green="0.76721038119999996" blue="0.9784775456" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="segmentedPressed:" destination="Sdz-hr-nnf" eventType="valueChanged" id="Xt6-bq-Sx3"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myChoice" translatesAutoresizingMaskIntoConstraints="NO" id="vmf-Vc-oII">
+                                        <rect key="frame" x="105.66666666666669" y="378.33333333333326" width="150" height="150"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-35-8F7">
+                                        <rect key="frame" x="28.666666666666657" y="554.33333333333326" width="304" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7d-qz-MDI">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="32"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                <state key="normal" title="Start engine" backgroundImage="button">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startEnginePressed:" destination="Sdz-hr-nnf" eventType="touchUpInside" id="1gc-lL-Df0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Ww-0in">
+                                                <rect key="frame" x="192" y="0.0" width="112" height="32"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                <state key="normal" title="Rate" backgroundImage="button">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateItPressed:" destination="Sdz-hr-nnf" eventType="touchUpInside" id="baw-eY-2Dh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qf3-G4-gDT" secondAttribute="trailing" constant="6" id="GNN-B0-D5K"/>
+                                    <constraint firstItem="Qf3-G4-gDT" firstAttribute="leading" secondItem="8XZ-6C-zMM" secondAttribute="leading" constant="6" id="HaG-QH-qsV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="81H-XL-khJ"/>
+                        <color key="backgroundColor" red="0.99492442609999998" green="0.99004387859999998" blue="0.98989319799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8XZ-6C-zMM" firstAttribute="centerX" secondItem="81H-XL-khJ" secondAttribute="centerX" id="5YE-Ex-dUb"/>
+                            <constraint firstAttribute="trailing" secondItem="8XZ-6C-zMM" secondAttribute="trailing" constant="16" id="Tln-a4-q7O"/>
+                            <constraint firstItem="8XZ-6C-zMM" firstAttribute="centerY" secondItem="81H-XL-khJ" secondAttribute="centerY" id="VIk-6b-XCR"/>
+                            <constraint firstItem="8XZ-6C-zMM" firstAttribute="leading" secondItem="8tk-Ih-bHs" secondAttribute="leading" constant="16" id="vXg-NC-t7e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carImage" destination="TsM-IL-raI" id="JFg-Jo-gtN"/>
+                        <outlet property="carSemented" destination="T1u-qW-cAr" id="SSZ-7u-ig0"/>
+                        <outlet property="lastTimeStartedLabel" destination="sSu-mw-M3S" id="O4F-ar-3wc"/>
+                        <outlet property="markLabel" destination="Xkw-aA-eAv" id="N5j-fa-yBY"/>
+                        <outlet property="modelLabel" destination="iih-vb-ARi" id="3zB-3a-k1A"/>
+                        <outlet property="myChoisImage" destination="vmf-Vc-oII" id="EM6-T4-V3t"/>
+                        <outlet property="numberOfTripsLabel" destination="olU-6d-eVq" id="iqg-jx-ThH"/>
+                        <outlet property="ratingLabel" destination="cUz-cM-zZR" id="88Y-m3-gNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwg-wf-leP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="637"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="button" width="112" height="32"/>
+        <image name="lamborginiMurcielago" width="210" height="101"/>
+        <image name="myChoice" width="150" height="150"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
